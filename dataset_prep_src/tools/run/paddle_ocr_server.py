@@ -21,6 +21,7 @@ from paddleocr import PaddleOCR
 
 def main() -> int:
     ocr = PaddleOCR(lang="en",
+                    device="gpu",
                     use_doc_orientation_classify=False,
                     use_doc_unwarping=False,
                     use_textline_orientation=False)
