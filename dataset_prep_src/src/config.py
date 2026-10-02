@@ -135,6 +135,8 @@ class FrameExtractionConfig:
     max_duration: float = 0.0
     #: Bỏ qua N frame đầu video (giai đoạn camera chưa ổn định).
     skip_start_frames: int = 0
+    #: Bỏ qua đến giây này (seek tới ``start_seconds`` giây). 0 = từ đầu video.
+    start_seconds: float = 0.0
     #: Nếu > 0, resize frame đã giữ về đúng chiều cao này. 0 = giữ nguyên.
     resize_height: int = 0
 

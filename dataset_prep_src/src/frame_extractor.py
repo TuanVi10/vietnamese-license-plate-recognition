@@ -252,7 +252,7 @@ def _iter_frames(
         reported_total = int(_finite_float(capture.get(cv2.CAP_PROP_FRAME_COUNT)))
 
         interval = max(1, int(config.frame_interval))
-        skip_start = max(0, int(config.skip_start_frames))
+        skip_start = max(0, int(config.skip_start_frames)) + max(0, int(round(config.start_seconds * fps)))
         resize_height = max(0, int(config.resize_height))
         max_frames = max(0, int(config.max_frames))
         max_duration = max(0.0, float(config.max_duration))

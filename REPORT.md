@@ -12,8 +12,9 @@
   <br/><i>Full pipeline on real traffic footage — vehicle detection + SORT tracking + plate OCR.</i>
 </p>
 
-▶️ **[Watch the full demo video](docs/assets/demo.mp4)** (~20 s, 854×480) — the animated preview above
-is a short excerpt; the `.mp4` is the complete clip.
+▶️ **[Watch the full demo video](docs/assets/demo.mp4)** (6 minutes, 720p) — a slice of the 13-minute
+clip (**minutes 3–9**) with **64 plates recognized** across 451 tracked vehicles; the animated preview
+above is a short excerpt.
 
 ---
 
@@ -98,6 +99,11 @@ video.mp4
   cu118 / cuDNN 8.9 → **they cannot be imported in the same process**.
 - **Solution**: keep two separate virtualenvs (`.venv-datasets`, `.venv-paddle`) and have the pipeline
   call OCR through a **worker subprocess** (avoids GPU-library crashes).
+- **Demo debugging (root cause, not VRAM)**: on GPU the OCR worker died after ~2 crops with
+  `[Errno 22] Invalid argument`. The fallback crops (bottom half of a vehicle) contain Chinese/Japanese
+  text that PaddleOCR (`lang="en"`) still recognized, and `print()` failed to encode them to the Windows
+  default `cp1252` stdout → `UnicodeEncodeError` killed the worker. Fixed by forcing `sys.stdout/stderr`
+  to **UTF-8** (and wrapping the read loop in `try/except`), which recovered OCR to **4021 reading frames**. 
 
 ### 3.6. Other engineering issues
 - **Tracking**: used SORT; handled ID switches, selected a **best-frame** per track (prefer crops with a
