@@ -21,6 +21,13 @@ integration → end-to-end**.
 - **Robust engineering**: Unicode-path I/O on Windows, NaN guards, per-module error isolation so
   the pipeline degrades gracefully instead of crashing.
 
+## Demo
+
+<p align="center">
+  <img src="docs/assets/demo.gif" width="600">
+  <br/><i>Vehicle detection + SORT tracking + plate OCR on real traffic footage — full clip: <a href="docs/assets/demo.mp4">demo.mp4</a></i>
+</p>
+
 ## Architecture (8 modules)
 
 ```
