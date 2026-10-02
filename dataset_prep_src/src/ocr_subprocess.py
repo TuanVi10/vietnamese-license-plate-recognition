@@ -21,7 +21,7 @@ class SubprocessPaddleEngine(BaseOCREngine):
     def __init__(
         self,
         python: str = r"S:\M_AGENT\CV\.venv-paddle\Scripts\python.exe",
-        script: str = r"S:\M_AGENT\CV\dataset_prep_src\tools\paddle_ocr_server.py",
+        script: str = r"S:\M_AGENT\CV\dataset_prep_src\tools\run\paddle_ocr_server.py",
         charset: str = DEFAULT_CHARSET,
         drop_empty: bool = True,
     ) -> None:

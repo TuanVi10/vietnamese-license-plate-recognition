@@ -56,3 +56,4 @@ sprint computer-vision.xlsx
 
 # ===== code-review-graph (index của tool — không commit) =====
 .code-review-graph/
+.code-review-graphignore

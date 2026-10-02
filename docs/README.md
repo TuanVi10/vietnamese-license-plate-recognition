@@ -1,8 +1,31 @@
 # Tài liệu giải thích chi tiết từng module
 
+> ⭐ **ĐỌC TRƯỚC TIÊN**: [`PROJECT_CODE_GUIDE.md`](PROJECT_CODE_GUIDE.md) — hướng dẫn code chi tiết
+> nhất (bản đồ thư mục, file nào chạy được, từng class/function/input/output/edge case).
+
 Mỗi file dưới đây giải thích **một module** trong pipeline nhận diện biển số xe Việt Nam:
 mục đích, input/output, cách xử lý từng bước, và quan trọng nhất là **điểm đặc biệt trong
 logic tính toán** (những chỗ dễ sai, mẹo kỹ thuật, quyết định thiết kế).
+
+## FILE NÀO CHẠY ĐƯỢC (Entry Points)
+
+**3 file gốc (root):**
+
+| File | Vai trò |
+|---|---|
+| `main.py` | CLI chạy pipeline VIDEO (M0→M7) — `python main.py --video <mp4>` |
+| `train_detector.py` | Fine-tune YOLO11n dò biển số — `python train_detector.py --epochs 3` |
+| `download_datasets.py` | Tải 3 dataset Roboflow (cần `ROBOFLOW_API_KEY`) |
+
+**41 script trong `dataset_prep_src/tools/`** (chạy `python tools/<nhóm>/<tên>.py`) — gom 7 nhóm:
+`data/` (10), `train/` (4), `eval/` (13), `run/` (6), `sample/` (2), `check/` (5),
+`utils/` (1). **Xem bảng đầy đủ trong `PROJECT_CODE_GUIDE.md` mục 2.**
+
+**Thư viện (không tự chạy, chỉ import):** `dataset_prep_src/src/*.py` (18 module core) +
+`dataset_prep_src/tools/utils/geometry_utils.py`.
+
+> Ghi chú sửa lỗi: docs cũ chưa có 2 module `src/ocr_subprocess.py` (PaddleOCR qua subprocess)
+> và `src/sample_data.py` (sinh biển giả). `geometry_utils.py` nằm ở **`tools/`** (không phải `src/`).
 
 ## Thứ tự đọc gợi ý
 
