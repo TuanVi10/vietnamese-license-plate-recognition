@@ -9,9 +9,10 @@
 
 Full pipeline output on real traffic video — vehicle detection + SORT tracking + plate OCR overlays:
 
-<video src="docs/assets/demo.mp4" controls width="100%"></video>
+▶️ **[Watch the demo video](docs/assets/demo.mp4)** — the full pipeline on real traffic footage
+(vehicle detection + SORT tracking + plate OCR overlays, ~20 s clip, 854×480).
 
-> If the video does not render inline on GitHub, open [`docs/assets/demo.mp4`](docs/assets/demo.mp4).
+> GitHub does not preview `.mp4` inline — click the link to play/download it.
 
 ---
 

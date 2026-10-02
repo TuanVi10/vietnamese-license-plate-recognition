@@ -29,6 +29,7 @@ results/
 
 # ===== Video & media lớn =====
 *.mp4
+!docs/assets/*.mp4
 *.avi
 *.mov
 *.mkv
