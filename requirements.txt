@@ -1,0 +1,28 @@
+# =====================================================================
+#  requirements.txt — ALPR video pipeline (Module 0-7)
+#  Dự án: Nhận diện biển số xe Việt Nam qua video (spec v2)
+#
+#  LƯU Ý cài đặt (xem spec-tai-dataset-bien-so-vn.md):
+#    * torch/torchvision cho Windows PHẢI cài từ index CUDA (bản PyPI là
+#      CPU-only, sẽ làm torch.cuda.is_available() == False):
+#          pip install --index-url https://download.pytorch.org/whl/cu126 torch torchvision
+#    * PaddleOCR chạy trên CPU: khởi tạo với enable_mkldnn=False (tránh crash).
+# =====================================================================
+
+# --- Thị giác máy / xử lý ảnh ---
+numpy>=1.24
+opencv-python>=4.8
+
+# --- Detect xe + biển số (YOLO) ---
+ultralytics>=8.3
+
+# --- PyTorch (CUDA 12.6 cho RTX 3050 6GB; xem ghi chú trên) ---
+torch>=2.4
+torchvision>=0.19
+
+# --- OCR chính (Module 5) ---
+paddlepaddle>=2.6
+paddleocr>=2.8
+
+# --- OCR fallback (tùy chọn, chỉ khi PaddleOCR gặp lỗi) ---
+# easyocr>=1.7

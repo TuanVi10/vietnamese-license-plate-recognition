@@ -1,0 +1,6 @@
+# Runtime dependencies of the Vietnamese license-plate dataset builder.
+# The parent environment is assumed to be Python 3.12 with these installed;
+# this file documents the exact requirements, it is never installed by the
+# pipeline itself.
+numpy>=1.24
+opencv-python>=4.8

@@ -1,0 +1,51 @@
+# Môi trường ảo (tên thư mục CỤ THỂ — code-review-graph match literal, không hỗ trợ glob trong tên thư mục)
+.venv/
+.venv-datasets/
+.venv-paddle/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Model weights (binary, lớn)
+models/
+*.pt
+*.onnx
+*.engine
+*.pth
+
+# Dataset (ảnh lớn)
+datasets/
+datasets_raw_ccpd/
+
+# Kết quả train/eval
+runs/
+results_vd2/
+results/
+
+# Video & media
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.zip
+*.rar
+*.7z
+
+# Labeling images (giữ lại CSV nhãn)
+labeling/images/
+labeling/viz_labeled/
+labeling_data.zip
+
+# Scratch / tạm
+scratch/
+session_*
+
+# Log
+*.log
