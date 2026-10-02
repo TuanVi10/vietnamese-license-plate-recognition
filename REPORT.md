@@ -8,7 +8,7 @@
 ## Demo (video)
 
 <p align="center">
-  <img src="docs/assets/demo.gif" width="600">
+  <img src="docs/assets/demo.gif" width="800">
   <br/><i>Full pipeline on real traffic footage — vehicle detection + SORT tracking + plate OCR.</i>
 </p>
 

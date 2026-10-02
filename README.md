@@ -24,7 +24,7 @@ integration → end-to-end**.
 ## Demo
 
 <p align="center">
-  <img src="docs/assets/demo.gif" width="600">
+  <img src="docs/assets/demo.gif" width="800">
   <br/><i>Vehicle detection + SORT tracking + plate OCR on real traffic footage — full clip: <a href="docs/assets/demo.mp4">demo.mp4</a></i>
 </p>
 
