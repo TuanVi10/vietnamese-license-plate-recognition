@@ -61,7 +61,7 @@ download_datasets.py          # fetch 3 public Vietnamese-plate datasets (Robofl
 dataset_prep_src/
   ├── src/                    # core library (18 modules)
   └── tools/                  # 41 scripts in data/ train/ eval/ run/ sample/ check/ utils/
-docs/                         # detailed module docs + PROJECT_CODE_GUIDE.md
+docs/                         # detailed module docs
 labeling/                     # hand-labeled ground truth (CSV) + labeling guide
 REPORT.md                     # full journey report (challenges, decisions, improvements)
 ```
@@ -112,9 +112,7 @@ python tools/run/run_full.py
 
 ## Documentation
 
-Start with **[docs/PROJECT_CODE_GUIDE.md](docs/PROJECT_CODE_GUIDE.md)** — an in-depth code guide
-(every file, class, function, input/output, edge case). Then read
-**[docs/README.md](docs/README.md)** for per-module explanations and the **"special logic" cheat-sheet**
+Read **[docs/README.md](docs/README.md)** for per-module explanations and the **"special logic" cheat-sheet**
 (SORT, position-wise fusion, corner gating, projection-profile deskew).
 
 ## Key technical decisions
