@@ -3,7 +3,7 @@ ocr.py
 ======
 Module 5 — OCR biển số.
 
-Engine chính: **PaddleOCR (PP-OCRv5)** — theo spec 3.5, phù hợp với biển 2 dòng
+Engine chính: **PaddleOCR (PP-OCRv6)** — theo spec 3.5, phù hợp với biển 2 dòng
 của xe máy VN và hỗ trợ tốt ký tự Latin (0-9, A-Z).
 
 Lưu ý triển khai quan trọng (spec 3.5):
@@ -215,7 +215,7 @@ class BaseOCREngine(ABC):
 
 
 class PaddleOCREngine(BaseOCREngine):
-    """Wrapper PaddleOCR (PP-OCRv5), tương thích cả API 2.x và 3.x.
+    """Wrapper PaddleOCR (PP-OCRv6), tương thích cả API 2.x và 3.x.
 
     Hai dòng API khác nhau ở cả cách khởi tạo lẫn cách gọi:
 

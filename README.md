@@ -14,7 +14,7 @@ integration → end-to-end**.
 
 - **Corner regression** (YOLO11-pose, 4 keypoints) warps skewed plates with `warpPerspective`
   when tilt exceeds **15°** — accuracy on heavily-tilted plates jumped **46.3% → 83.3%**.
-- **PaddleOCR** (PP-OCRv5) replaced EasyOCR — OCR exact-match jumped **6.6% → 74.6%**.
+- **PaddleOCR** (PP-OCRv6) replaced EasyOCR — OCR exact-match jumped **6.6% → 74.6%**.
 - **Position-wise voting fusion** merges multiple reads of one track *per character position*,
   so a single wrong character never splits the vote (and it detects "two plates mixed in one track").
 - **SORT tracker** (Kalman + Hungarian + IoU) implemented from scratch with only NumPy.
